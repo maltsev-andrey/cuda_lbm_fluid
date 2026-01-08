@@ -149,7 +149,7 @@ This shifts the equilibrium distribution to account for acceleration during the 
 
 The BGK model uses a single relaxation time for all distribution modes, which couples the viscosity to the bulk viscosity and limits the achievable Reynolds number. The Multi-Relaxation-Time (MRT) approach transforms to moment space where different modes can relax at different rates:
 
-![Multiple Relaxation Time (MRT)](multiple_relaxation_time_MRT_.png)
+![Multiple Relaxation Time (MRT)](images/multiple_relaxation_time_MRT_.png)
 
 where m is the moment vector, S is a diagonal relaxation matrix, and the transformation between distribution and moment space is performed through a fixed matrix M.
 
