@@ -37,7 +37,7 @@ The corresponding weights, derived from the requirement of isotropy up to fourth
 
 The evolution of distribution functions follows the lattice Boltzmann equation with the Bhatnagar-Gross-Krook (BGK) single-relaxation-time collision operator:
 
-![ Bhatnagar-Gross-Krook (BGK) operator](results/figures/bgk_operator.png)
+![ Bhatnagar-Gross-Krook (BGK) operator](docs/images/bgk_operator.png)
 
 The kinematic viscosity relates to the relaxation time through nu = (tau - 0.5) / 3, establishing the connection between the mesoscopic LBM parameters and macroscopic fluid properties.
 
