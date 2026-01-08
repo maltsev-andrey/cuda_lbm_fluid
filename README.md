@@ -5,6 +5,17 @@
 
 High-performance Lattice Boltzmann Method (LBM) solver for computational fluid dynamics, achieving **7,248 MLUPS** (Million Lattice Updates Per Second) on Tesla P100.
 
+Vortex Shedding Simulation
+<p align="center">
+  <img src="results/animations/vortex_shedding_gpu.gif" alt="Karman Vortex Street at Re=100" width="800">
+</p>
+<p align="center"><em>Figure 1 — Karman vortex street behind a circular cylinder at Re = 100. Alternating vortices shed from the upper and lower surfaces, creating the characteristic staggered pattern first described by Theodore von Karman in 1911. Color indicates vorticity magnitude and sign (blue: clockwise, red: counterclockwise).</em></p>
+<p align="center">
+  <img src="results/animations/vortex_shedding.gif" alt="Steady Wake at Re=40" width="800">
+</p>
+<p align="center"><em>Figure 2 — Steady twin-vortex wake at Re = 40, below the critical Reynolds number for vortex shedding. The symmetric recirculation region remains attached to the cylinder, demonstrating the qualitative change in flow behavior across the stability threshold.</em></p>
+
+
 ## Performance Highlights
 
 | Metric                  | Value                              |

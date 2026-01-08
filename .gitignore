@@ -33,7 +33,6 @@ env/
 
 # Results (keep structure, ignore large files)
 results/animations/*.mp4
-results/animations/*.gif
 results/benchmarks/*.npy
 
 # Jupyter
