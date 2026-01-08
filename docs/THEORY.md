@@ -21,10 +21,10 @@ The connection to fluid dynamics emerges through the moments of the distribution
 ## BGK Approximation
 
 Bhatnagar, Gross, and Krook (1954) introduced a simplified collision operator that replaces the complex integral with a relaxation toward local equilibrium:
-![Bhatnagar–Gross–Krook_BGK_collision_operator](docs/images/Bhatnagar–Gross–Krook_BGK_collision_operator.png)
+![Bhatnagar–Gross–Krook_BGK_collision_operator](images/Bhatnagar–Gross–Krook_BGK_collision_operator.png)
 
 This BGK operator drives the distribution toward the Maxwell-Boltzmann equilibrium f_eq on a characteristic timescale tau. Despite its simplicity, the BGK model correctly reproduces the Navier-Stokes equations in the hydrodynamic limit, with the kinematic viscosity related to the relaxation time through:
-![Lattice Boltzmann method](docs/images/lattice_boltzmann_method.png)
+![Lattice Boltzmann method](images/lattice_boltzmann_method.png)
 
 where c_s is the speed of sound and dt is the timestep. The factor of dt/2 arises from the discretization and represents the difference between pre-collision and post-collision distributions.
 
@@ -61,19 +61,19 @@ These weights ensure that the discrete velocity set correctly represents the Max
 ### Equilibrium Distribution
 
 The discrete equilibrium distribution takes the form:
-![Navier_Stokes_equations](docs/images/Navier_Stokes_equations.png)
+![Navier_Stokes_equations](images/Navier_Stokes_equations.png)
 
 where rho is the density, u is the macroscopic velocity, and c_s = 1/sqrt(3) is the lattice speed of sound. This expression represents the Maxwell-Boltzmann distribution expanded to second order in velocity, sufficient for incompressible flow at low Mach numbers.
 
 The equilibrium satisfies the conservation constraints:
 
-![Consistency Conditions](docs/images/consistency_conditions.png)
+![Consistency Conditions](images/consistency_conditions.png)
 
 ## The Lattice Boltzmann Equation
 
 Combining the BGK collision with lattice discretization yields the lattice Boltzmann equation:
 
-![Lattice Boltzmann update rule](docs/images/lattice_boltzmann_update_rule.png)
+![Lattice Boltzmann update rule](images/lattice_boltzmann_update_rule.png)
 
 This equation describes a two-step process repeated at each timestep:
 
@@ -89,15 +89,15 @@ The Chapman-Enskog analysis demonstrates that the lattice Boltzmann equation rep
 
 Expanding the distribution function as:
 
-![Chapman–Enskog expansion](docs/images/chapman_enskog_expansion.png)
+![Chapman–Enskog expansion](images/chapman_enskog_expansion.png)
 
 and applying the appropriate multi-scale expansion, the zeroth-order terms yield the Euler equations (inviscid flow), while the first-order correction introduces viscous effects with:
 
-![Kinematic viscosity](docs/images/kinematic_viscosity.png)
+![Kinematic viscosity](images/kinematic_viscosity.png)
 
 The resulting equations are:
 
-![Compressible Navier–Stokes equations](docs/images/compressible_navier_stokes_equations.png)
+![Compressible Navier–Stokes equations](images/compressible_navier_stokes_equations.png)
 
 with the equation of state p = rho * c_s^2 = rho/3 for the D2Q9 lattice.
 
@@ -107,7 +107,7 @@ with the equation of state p = rho * c_s^2 = rho/3 for the D2Q9 lattice.
 
 The bounce-back scheme enforces no-slip conditions at solid walls by reversing the direction of distributions that would otherwise enter the solid region:
 
-![Streaming step](docs/images/streaming_step.png)
+![Streaming step](images/streaming_step.png)
 
 where i_bar denotes the direction opposite to i, and x_f is a fluid node adjacent to a solid node. This effectively places the wall at the midpoint between fluid and solid nodes, providing second-order accuracy for the wall location.
 
@@ -119,11 +119,11 @@ For open boundaries where velocity or pressure is specified, the Zou-He method p
 
 At a velocity inlet on the left boundary (x = 0), the distributions f_3, f_6, and f_7 are unknown because they would originate from outside the domain. However, the specified velocity u_inlet and the requirement of consistent density provide three constraints:
 
-![Conserved moments](docs/images/conserved_moments.png)
+![Conserved moments](images/conserved_moments.png)
 
 Solving these equations for the unknown distributions yields:
 
-![Expressions](docs/images/expressions.png)
+![Expressions](images/expressions.png)
 
 where rho is determined from the known distributions and the specified velocity.
 
@@ -141,7 +141,7 @@ The Reynolds number Re = UL/nu determines the flow physics but also affects nume
 
 External forces such as gravity or pressure gradients can be incorporated through several methods. The simplest approach adds a forcing term to the equilibrium velocity
 
-![Equilibrium_velocity](docs/images/equilibrium_velocity.png)
+![Equilibrium_velocity](images/equilibrium_velocity.png)
 
 This shifts the equilibrium distribution to account for acceleration during the collision step. More accurate methods such as the Guo forcing scheme provide second-order accuracy by also modifying the non-equilibrium part of the distribution.
 
