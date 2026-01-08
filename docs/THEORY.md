@@ -12,7 +12,7 @@ This document provides the theoretical foundation for the Lattice Boltzmann Meth
 The Lattice Boltzmann Method derives from the kinetic theory of gases, which describes fluid behavior through the statistical mechanics of molecular motion. Rather than tracking individual molecules, kinetic theory works with the particle distribution function f(x, v, t), representing the probability of finding a particle at position x with velocity v at time t.
 
 The evolution of this distribution function follows the Boltzmann equation:
-![Boltzmann_kinetic_equation](docs/images/Boltzmann_kinetic_equation.png)
+![Boltzmann_kinetic_equation](images/Boltzmann_kinetic_equation.png)
 
 The left side represents free streaming of particles along their velocity characteristics, while the right side Omega(f) is the collision operator describing how particle interactions redistribute momentum and energy. The complexity of the full Boltzmann collision integral makes direct solution computationally prohibitive for most applications.
 
