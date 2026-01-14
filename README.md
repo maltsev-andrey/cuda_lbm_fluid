@@ -165,6 +165,17 @@ Generates:
 ```bash
 pytest tests/ -v
 ```
+## Documentation
+
+Comprehensive documentation is available for all aspects of the project.
+
+| Document | Description |
+|----------|-------------|
+| [DOCUMENTATION.md](DOCUMENTATION.md) | Complete project report with methodology, results, and analysis |
+| [docs/THEORY.md](docs/THEORY.md) | Lattice Boltzmann theoretical foundations and derivations |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Software design, module structure, and data flow |
+| [docs/BENCHMARKS.md](docs/BENCHMARKS.md) | Performance measurements, scaling analysis, and hardware comparison |
+
 
 ## Technical Details
 
